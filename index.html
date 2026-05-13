@@ -859,7 +859,9 @@
           flippedCount++;
           createLittleHearts(this);
           if (flippedCount === reasons.length) {
-            document.getElementById('btn-to-sec3').classList.add('visible');
+            const btn = document.getElementById('btn-to-sec3');
+            btn.classList.add('visible');
+            setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
           }
         }
       };
